@@ -1,0 +1,15 @@
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">MSAL Demo App</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <button class="btn btn-success" (click)="login()" *ngIf="!loggedIn()">Log-In</button>
+        <button class="btn btn-success" (click)="logOut()" *ngIf="loggedIn()">Log-Out</button>
+      </ul>
+    </div>
+  </div>
+</nav>
+<h1 *ngIf="loggedIn()">
+  Welcome {{ getUserDetails() }} to our Home Page!
+</h1>
+<router-outlet></router-outlet>
